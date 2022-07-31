@@ -19,5 +19,5 @@ To create a module in react that can recognize commands and perform actions base
 
 # Screenshots 
 A few screenshots of the application.
-![](/src/assets/Demo-1.png)
-![](/src/assets/Demo-2.png)
+![](src/assets/Demo-1.png)
+![](src/assets/Demo-2.png)
