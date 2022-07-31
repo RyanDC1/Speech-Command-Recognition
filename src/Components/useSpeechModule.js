@@ -112,7 +112,7 @@ function useSpeechModule() {
         setTrainProgress(null)
     }
 
-    async function trainModel(commandsList, samples, epochs) {
+    async function trainModel(commandsList, samples, epochs = 25) {
         if (model == null) {
             return
         }
@@ -145,7 +145,7 @@ function useSpeechModule() {
         let epochPercentIncrease = 75 / epochs;
 
         await transferRecognizer.train({
-            epochs: epochs,
+            epochs: parseInt(epochs),
             callback: {
                 onEpochEnd: async (epoch, logs) => {
                     console.log(`Epoch ${epoch}: loss=${logs.loss}, accuracy=${logs.acc}`);

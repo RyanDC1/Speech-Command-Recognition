@@ -63,7 +63,7 @@ function CommandFactory() {
                     </Row>
                 </>
                 :
-                <p style={{textAlign:'initial', marginTop: 24}}>Available Commands: {map(commands, command => (<Tag>{command}</Tag>))}</p>
+                <p style={{textAlign:'initial', marginTop: 24}}>Available Commands: {map(commands, (command, index) => (<Tag key={index}>{command}</Tag>))}</p>
             }
             <div className='command-render'>
                 <CommandRender command={String(value).trim().toLowerCase()}/>
